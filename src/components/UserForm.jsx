@@ -21,9 +21,7 @@ const UserForm = () => {
   const validationSchema = Yup.object({
     firstName: Yup.string().required("first Name is required"),
     lastName: Yup.string().required("last Name is required"),
-    email: Yup.string()
-      .email("Invalid email")
-      .required("first Name is required"),
+    email: Yup.string().email("Invalid email").required("email is required"),
     phoneNumber: Yup.string()
       .required()
       .matches(/^\d{10}$/, "phone number must be 10 digits"),
