@@ -38,7 +38,7 @@ const UserForm = () => {
       .required()
       .typeError("age must be a number")
       .min(18, "must be min 18")
-      .max(100, "must be min 100"),
+      .max(100, "must be max 100"),
     gender: Yup.string().required(),
     interest: Yup.array().min(1, "select atleast 1").required(),
     birthDate: Yup.date().required(),
