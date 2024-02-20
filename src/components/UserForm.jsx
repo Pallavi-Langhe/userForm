@@ -25,9 +25,9 @@ const UserForm = () => {
     phoneNumber: Yup.string()
       .required()
       .matches(/^\d{10}$/, "phone number must be 10 digits"),
-    password: Yup.string()
+    password: Yup.min(8, "pass must be more than 8 char")
+      .string()
       .required("password is required")
-      .min(8, "pass must be more than 8 char")
       .matches(/[0-9]/, "muct contain digit")
       .matches(/[a-z]/, "must contain lowercaes letter")
       .matches(/[A-Z]/, "must contain uppercase letter"),
